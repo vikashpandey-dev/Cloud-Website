@@ -1,11 +1,10 @@
 import React from 'react';
-import error from '../../assets/images/error.jpg'
 import { NavLink } from 'react-router-dom';
 
 const Error = () => {
   return (
     <div className="error-h w-full relative">
-      <img src={error} alt="error" className="error-h w-full" />
+      <img src="https://imgur.com/FkHCrdg.jpg" alt="error" className="error-h w-full " />
       <div className="absolute top-0 left-0 w-full">
         <div className="container mx-auto">
           <div className="flex items-center error-h text-center w-full justify-center">

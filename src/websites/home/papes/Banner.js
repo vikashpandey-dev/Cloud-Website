@@ -3,11 +3,11 @@ import React from 'react';
 const Banner = () => {
   return (
     <div id="home">
-      <div className="h-banner relative">
+      <div className="h-banner relative bgforth">
         <img
           src="https://imgur.com/8rRwSyg.jpg"
           alt="banner"
-          className="h-banner filter-b4"
+          className="h-banner sm-hidden filter-b4"
         />
         <div className="absolute top-0 left-0 h-banner w-full">
           <div className="container mx-auto ">
@@ -36,7 +36,10 @@ const Banner = () => {
               </div>
               <div className="w-50 sm-w-full sm-mtpx10">
                 <video loop autoPlay className="banner-img w-full">
-                  <source src="https://imgur.com/3ovI7Ip.mp4" type="video/mp4" />
+                  <source
+                    src="https://imgur.com/3ovI7Ip.mp4"
+                    type="video/mp4"
+                  />
                 </video>
               </div>
             </div>
