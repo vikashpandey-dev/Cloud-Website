@@ -1,6 +1,18 @@
-import React from 'react';
+import {React,useEffect} from 'react';
+import { connect } from "react-redux";
+import {GetUSers} from "../../../api/users"
+const About1 = (props) => {
+  useEffect(()=>{
+    GetData()
+    if(props.Records.length>0){
+      console.log(props.Records,"propspropsprops")
+    }
+},[])
 
-const About1 = () => {
+const GetData=async()=>{
+    const payload={}
+   await props.GetUSersAPI(payload)
+}
   return (
     <div id="about">
       <div className="bgwhite ptpx60 pbpx30 ">
@@ -38,4 +50,18 @@ const About1 = () => {
   );
 }
 
-export default About1
+
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    GetUSersAPI: (payload) => dispatch(GetUSers(payload)),
+  };
+};
+
+const mapStateToProps = (state, props) => {
+  return {
+    Records: state?.users?.data,
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(About1);
